@@ -1,9 +1,9 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import PropTypes, { string } from "prop-types";
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import uuid4 from "uuid4";
-import styles from "../styles/Searching.module.css";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import PropTypes, { string } from 'prop-types';
+import { FaRegArrowAltCircleRight } from 'react-icons/fa';
+import uuid4 from 'uuid4';
+import styles from '../styles/Searching.module.css';
 
 const Searching = ({ myArray, text }) => (
   <>
@@ -20,13 +20,16 @@ const Searching = ({ myArray, text }) => (
           <NavLink
             to="details"
             state={{ country: item }}
-            className={styles.link}>
+            className={styles.link}
+          >
             <FaRegArrowAltCircleRight />
             <span>{item.flag}</span>
             <p>
               {item.name.common}
               <br />
-              {item.population} people
+              {item.population}
+              {' '}
+              people
             </p>
           </NavLink>
         </div>
